@@ -1,0 +1,34 @@
+.headerContainer {
+    background: #27272A;
+    max-width: 1920px;
+    width: 100%;
+    min-height: 44px;
+    border-bottom: 1px solid #414144;;
+}
+
+.headerButtons {
+    padding: 0px 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 27px;
+}
+
+.ButtonSquare {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    color: #A1A1AA;
+}
+
+.ButtonShow {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    min-height: 44px;
+}

@@ -1,0 +1,19 @@
+.navbarHeader{
+    min-height: 44px;
+    border-bottom: 1px solid #414144;
+    padding: 8px 20px;
+}
+.titleProject{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #A1A1AA;
+}
+.abbreviation{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #A1A1AA;
+}
