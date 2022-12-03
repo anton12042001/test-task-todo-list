@@ -9,9 +9,8 @@ const AppRouter = () => {
         <Routes>
             {publicRoutes.map(route =>
                 <Route
-                    component={route.component}
+                    element={route.element}
                     path={route.path}
-                    exact={route.exact}
                     key={route.path}
                 />
             )}

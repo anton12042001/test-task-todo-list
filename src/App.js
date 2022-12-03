@@ -20,7 +20,12 @@ const App = () => {
                             <Navbar/>
                         </div>
                     </div>
-                    <AppRouter/>
+                    <div className={cl.appPage} >
+                        <div className={cl.contentHeader} >
+                            <div className={cl.titleTodo} >Название туду</div>
+                        </div>
+                        <AppRouter/>
+                    </div>
                 </div>
             </Provider>
         </BrowserRouter>

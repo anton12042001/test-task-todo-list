@@ -19,10 +19,13 @@
 }
 
 .ButtonSquare {
+    cursor: pointer;
     min-height: 44px;
     display: flex;
     align-items: center;
     color: #A1A1AA;
+    border: none;
+    background: none;
 }
 
 .ButtonShow {
@@ -31,4 +34,16 @@
     border-bottom: 2px solid #FFFFFF;
     color: #FFFFFF;
     min-height: 44px;
+}
+.popapCreateTodo{
+    position: absolute;
+    top:50px;
+    left: 25px;
+    width: 210px;
+    height: 150px;
+    z-index: 50;
+    background: #606060;
+    border-radius: 16px;
+    padding: 15px;
+    text-align: center;
 }

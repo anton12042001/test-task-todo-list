@@ -1,9 +1,35 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-.navbarContent{
+
+.navbarContent {
     display: flex;
+}
+
+.appPage {
+    margin: 0 0 0 234px;
+    min-height: 100%;
+    background: #202124;
+    position: fixed;
+    width: 100%;
+}
+
+.contentHeader {
+    border-bottom: 1px solid #414144;
+}
+
+.titleTodo {
+
+    padding: 11px 15px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    border-right: 1px solid #414144;
+    display: inline-block;
+    text-align: center;
 }

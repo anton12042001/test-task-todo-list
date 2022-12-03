@@ -1,9 +1,9 @@
 import {configureStore} from "@reduxjs/toolkit";
-import dialogsReducer from './slices/dialogsIdSlice'
+import dialogsReducer from './slices/taskSlice'
 
 export const store = configureStore({
     reducer: {
-        dialogs:dialogsReducer,
+        task:dialogsReducer,
     },
     middleware: getDefaultMiddleware =>
         getDefaultMiddleware({
