@@ -1,8 +1,12 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import cl from "./InputCreateTodo.module.css"
+import {getTask} from "../../../reduxToolkit/slices/taskSlice";
+import {useDispatch} from "react-redux";
 
 const InputCreateTodo = ({}) => {
+
+    const dispatch = useDispatch()
 
     const {
         register,
@@ -13,8 +17,8 @@ const InputCreateTodo = ({}) => {
 
     const onSubmit = (data) => {
         reset()
-        debugger
-        localStorage.setItem("todoItem2",data.titleTodo)
+        localStorage.setItem(`${localStorage.length}`,data.titleTodo)
+        dispatch(getTask())
     }
 
     return (

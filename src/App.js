@@ -4,11 +4,13 @@ import Header from "./Components/Header/Header";
 import cl from './App.module.css'
 import AppRouter from "./Components/AppRouter/AppRouter";
 import {store} from "./reduxToolkit";
-import {Provider} from "react-redux";
+import {Provider, } from "react-redux";
 import Navbar from "./Components/Navbar/Navbar";
+import ContentHeader from "./Components/ContentHeader/ContentHeader";
 
 
 const App = () => {
+
 
     return (
         <BrowserRouter>
@@ -21,9 +23,7 @@ const App = () => {
                         </div>
                     </div>
                     <div className={cl.appPage} >
-                        <div className={cl.contentHeader} >
-                            <div className={cl.titleTodo} >Название туду</div>
-                        </div>
+                        <ContentHeader/>
                         <AppRouter/>
                     </div>
                 </div>

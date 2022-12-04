@@ -5,27 +5,37 @@ const initialState = {
 
 }
 
-export const getTask = createAsyncThunk("task/setTask", async (_,{ rejectWithValue , dispatch }) =>  {
-    const res = localStorage.getItem("todoItem")
-    dispatch(setTask(res))
-    })
+export const getTask = createAsyncThunk("task/setTask", async (_, {rejectWithValue, dispatch}) => {
+    dispatch(removeTask())
+    for (let i = 0; i < localStorage.length; i++) {
+        let key = localStorage.key(i);
+        const res = {
+            todoName: localStorage.getItem(key),
+            id: key
+        }
+        dispatch(setTask(res))
 
+    }
+})
 
 
 const taskSlice = createSlice({
     name: 'task',
     initialState,
     reducers: {
-        setTask(state,action) {
-            state.task = action.payload
+        setTask(state, action) {
+            state.task.push(action.payload)
         },
+        removeTask(state,action){
+            state.task = []
+        }
     },
-    extraReducers:{
-        [getTask.fulfilled]: () => console.log('fullFild'),
-        [getTask.pending]: () => console.log('pending'),
-        [getTask.rejected]: () => console.log('rejected'),
+    extraReducers: {
+        // [getTask.fulfilled]: () => console.log('fullFild'),
+        // [getTask.pending]: () => console.log('pending'),
+        // [getTask.rejected]: () => console.log('rejected'),
     }
 })
-export const {setTask} = taskSlice.actions
+export const {setTask,removeTask} = taskSlice.actions
 
-export default  taskSlice.reducer
+export default taskSlice.reducer

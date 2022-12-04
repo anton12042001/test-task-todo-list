@@ -1,9 +1,11 @@
 import {configureStore} from "@reduxjs/toolkit";
-import dialogsReducer from './slices/taskSlice'
+import taskReducer from './slices/taskSlice'
+import currentTaskReducer from './slices/currentTaskSlice'
 
 export const store = configureStore({
     reducer: {
-        task:dialogsReducer,
+        task:taskReducer,
+        currentTask:currentTaskReducer,
     },
     middleware: getDefaultMiddleware =>
         getDefaultMiddleware({

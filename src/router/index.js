@@ -1,7 +1,6 @@
 import TaskPage from "../pages/TaskPage/TaskPage";
 
 export const publicRoutes = [
-    // {path: '/Control', component: Control},
-    // {path: '/task/:id', component: TaskIdPage},
     {path: '/task/', element: <TaskPage/>},
+    {path: '/task:id', element: <TaskPage/>},
 ]

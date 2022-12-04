@@ -17,19 +17,11 @@
     width: 100%;
 }
 
-.contentHeader {
-    border-bottom: 1px solid #414144;
+@media(max-width: 767px){
+    .appPage{
+
+        left: -234px;
+    }
 }
 
-.titleTodo {
 
-    padding: 11px 15px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-    color: #FFFFFF;
-    border-right: 1px solid #414144;
-    display: inline-block;
-    text-align: center;
-}

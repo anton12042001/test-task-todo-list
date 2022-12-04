@@ -1,8 +1,51 @@
-.navbarContainer{
+.navbarContainerActive{
     max-width: 234px;
     width: 100%;
     height: 100%;
     position: fixed;
     background: #27272A;
     color: #FFFFFF;
+    z-index: 50;
+}
+.navbarWrapper{
+    display: flex;
+}
+.openNavbarLeft{
+    position: absolute;
+    left: 234px;
+    top: 350px;
+    z-index: 50;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 0 50% 50% 0;
+    background: #414144;
+}
+.openNavbarRight{
+    position: absolute;
+    left: 0px;
+    top: 350px;
+    z-index: 50;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 0 50% 50% 0;
+    background: #414144;
+}
+.navbarContainer{
+    z-index: 50;
+    max-width: 234px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #27272A;
+    color: #FFFFFF;
+}
+@media(max-width: 767px){
+    .navbarContainerActive{
+        left: 0px;
+    }
+    .navbarContainer{
+        left: -250px;
+    }
 }
