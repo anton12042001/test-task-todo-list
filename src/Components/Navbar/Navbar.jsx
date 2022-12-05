@@ -25,7 +25,7 @@ const Navbar = () => {
                 onClick={() => setShowNavbar(!showNavbar)}
                 className={(showNavbar) ? cl.openNavbarLeft : cl.openNavbarRight }
             >
-                
+
             </button>
         </div>
     );

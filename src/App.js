@@ -6,7 +6,7 @@ import AppRouter from "./Components/AppRouter/AppRouter";
 import {store} from "./reduxToolkit";
 import {Provider, } from "react-redux";
 import Navbar from "./Components/Navbar/Navbar";
-import ContentHeader from "./Components/ContentHeader/ContentHeader";
+import ContentHeader from "./Components/ContentBlock/ContentHeader/ContentHeader";
 
 
 const App = () => {

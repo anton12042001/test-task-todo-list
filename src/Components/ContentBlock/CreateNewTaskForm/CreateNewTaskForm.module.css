@@ -14,3 +14,15 @@
 .input:focus{
     outline: none;
 }
+.createNewTask{
+    cursor: pointer;
+    background: none;
+    border: 1px solid #414144;
+    width: 85px;
+    height: 40px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    color: #FFFFFF;
+}

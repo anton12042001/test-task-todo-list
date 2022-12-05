@@ -5,12 +5,13 @@
     position: fixed;
     background: #27272A;
     color: #FFFFFF;
-    z-index: 50;
+    z-index: 5;
 }
 .navbarWrapper{
     display: flex;
 }
 .openNavbarLeft{
+    display: none;
     position: absolute;
     left: 234px;
     top: 350px;
@@ -22,6 +23,7 @@
     background: #414144;
 }
 .openNavbarRight{
+    display: none;
     position: absolute;
     left: 0px;
     top: 350px;
@@ -47,5 +49,11 @@
     }
     .navbarContainer{
         left: -250px;
+    }
+    .openNavbarLeft{
+        display: inherit;
+    }
+    .openNavbarRight{
+        display: inherit;
     }
 }
