@@ -22,7 +22,7 @@ const TaskPage = () => {
     return (
         <div className={cl.taskContainer}>
             <div className={cl.createNewTaskButton} >
-                <button onClick={() => setShowPopapCreateTask(true)} >Создать новую задачу</button>
+                <button onClick={() => setShowPopapCreateTask(!showPopapCreateTask)} >Создать новую задачу</button>
             </div>
             {(showPopapCreateTask) && <CreateNewTaskForm setShowPopapCreateTask={setShowPopapCreateTask}/>}
         </div>

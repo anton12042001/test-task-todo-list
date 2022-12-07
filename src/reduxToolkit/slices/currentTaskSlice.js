@@ -5,14 +5,18 @@ const initialState = {
 }
 
 
+
+
+
+
 const currentTaskSlice = createSlice({
     name:"currentTask",
     initialState,
     reducers:{
         setCurrentTask(state,action){
-          state.currentTaskName  = action.payload
+          state.currentTaskName = action.payload
         },
-    }
+    },
 
 })
 
