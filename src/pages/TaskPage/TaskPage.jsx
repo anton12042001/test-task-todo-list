@@ -9,9 +9,7 @@ const TaskPage = () => {
     const [showPopapCreateTask,setShowPopapCreateTask] = useState(false)
 
     useEffect(() => {
-        console.log(params)
        const res = localStorage.getItem(`${params.id}`)
-        console.log(res)
     },[params.id])
 
 

@@ -17,7 +17,12 @@ const InputCreateTodo = ({}) => {
 
     const onSubmit = (data) => {
         reset()
-        localStorage.setItem(`${localStorage.length}`,data.titleTodo)
+        const titleTodo = {
+            titleTodo: data.titleTodo,
+            taskItem:[]
+        }
+        localStorage.setItem(`${localStorage.length}`,JSON.stringify(titleTodo))
+
         dispatch(getTask())
     }
 

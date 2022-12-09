@@ -9,12 +9,16 @@ export const getTask = createAsyncThunk("task/getTask", async (_, {rejectWithVal
     dispatch(removeTask())
     for (let i = 0; i < localStorage.length; i++) {
         let key = localStorage.key(i);
-        const res = {
-            todoName: localStorage.getItem(key),
-            id: key
+        const getItem = localStorage.getItem(`${key}`)
+        if(localStorage.length !== 0 &&  getItem !== null){
+            const todoItem = JSON.parse(getItem)
+            const res = {
+                todoName: todoItem.titleTodo,
+                taskItem:todoItem.taskItem,
+                id: key
+            }
+            dispatch(setTask(res))
         }
-        dispatch(setTask(res))
-
     }
 })
 

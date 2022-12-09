@@ -5,10 +5,35 @@ const initialState = {
 }
 
 export const setTaskFromProject = createAsyncThunk('currentTask/setTaskFromProject',async(action,{rejectWithValue,dispatch}) => {
-    const titleTask = localStorage.getItem(`${action.key}`)
+
+    const getItem = localStorage.getItem(`${action.key}`)
+    const arrayTaskItem = JSON.parse(getItem).taskItem
 
 
-    // localStorage.setItem(`${action.key}`,`${action.titleTask}`)
+    if(localStorage.length !== 0 &&  getItem !== null){
+        console.log("Ща сработает")
+        arrayTaskItem.push(action.taskItem)
+        console.log(arrayTaskItem)
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // const taskProject ={
+    //     titleTask:getItem.titleTodo,
+    //     taskItem:arrayTaskItem
+    // }
+    // console.log(taskProject)
+    // localStorage.setItem(`${action.key}`,`${JSON.stringify(taskProject)}`)
 })
 
 const projectTasksSlice = createSlice({
