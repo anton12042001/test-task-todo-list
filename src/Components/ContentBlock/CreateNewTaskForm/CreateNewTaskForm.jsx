@@ -1,10 +1,9 @@
 import React from 'react';
-import {useForm} from "react-hook-form";
+import {useForm,Controller} from "react-hook-form";
 import cl from './CreateNewTaskForm.module.css'
 import {useParams} from "react-router-dom";
 import {setTaskFromProject} from "../../../reduxToolkit/slices/projectTasks";
 import {useDispatch} from "react-redux";
-import {getTask} from "../../../reduxToolkit/slices/taskSlice";
 
 const CreateNewTaskForm = ({setShowPopapCreateTask}) => {
     const params = useParams()
@@ -14,6 +13,7 @@ const CreateNewTaskForm = ({setShowPopapCreateTask}) => {
         register,
         handleSubmit,
         reset,
+        control
 
     } = useForm();
 

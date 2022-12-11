@@ -5,6 +5,7 @@ import CreateNewTaskForm from "../../Components/ContentBlock/CreateNewTaskForm/C
 import {useDispatch, useSelector} from "react-redux";
 import {setTaskFromProject} from "../../reduxToolkit/slices/projectTasks";
 import ContentBodyTask from "../../Components/ContentBlock/ContentBodyTask/ContentBodyTask";
+import Loader from "../../Components/UI/Loader";
 
 
 const TaskPage = () => {
@@ -13,7 +14,7 @@ const TaskPage = () => {
     const dispatch = useDispatch()
     const {projectTasks} = useSelector(state => state.projectTasks)
 
-    //todo поправить useEffect
+
     useEffect(() => {
         const data = {
             key: params.id
@@ -22,9 +23,13 @@ const TaskPage = () => {
     }, [params.id])
 
 
+
+    if(projectTasks.length === 0){
+        return <Loader/>
+    }
     return (
         <div className={cl.taskContainer}>
-            {projectTasks.taskItem.map(i => <ContentBodyTask itemTask={i} /> )}
+            {projectTasks.taskItem.map(i => <ContentBodyTask itemTask={i} key={projectTasks.taskItem.indexOf(i)}  /> )}
             {(params.id) &&
                 <div className={cl.createNewTaskButton}>
                     <button onClick={() => setShowPopapCreateTask(!showPopapCreateTask)}>Создать новую задачу</button>

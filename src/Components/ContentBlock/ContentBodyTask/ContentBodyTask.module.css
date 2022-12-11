@@ -1,0 +1,47 @@
+.itemContainer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+    border-top: 1px solid #414144;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: 0.1px;
+    color: #FFFFFF;
+}
+.itemContainerActive{
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+    border-top: 1px solid #414144;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: 0.1px;
+    color: #FFFFFF;
+    background: #525151;
+}
+.itemContainer:first-child{
+    border: none;
+}
+.taskIcon{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0 38px 0 56px;
+}
+.deleteTask{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
