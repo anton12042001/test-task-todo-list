@@ -12,7 +12,7 @@ const NavbarTodoItems = ({todoName,id}) => {
 
     const burnCurrentTodo = () => {
         dispatch(setCurrentTask(todoName))
-        navigate(`/task${id}`)
+        navigate(`/task/${id}`)
     }
 
 
