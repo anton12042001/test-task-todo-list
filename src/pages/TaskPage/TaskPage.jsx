@@ -5,7 +5,7 @@ import CreateNewTaskForm from "../../Components/ContentBlock/CreateNewTaskForm/C
 import {useDispatch, useSelector} from "react-redux";
 import {setTaskFromProject} from "../../reduxToolkit/slices/projectTasks";
 import ContentBodyTask from "../../Components/ContentBlock/ContentBodyTask/ContentBodyTask";
-import Loader from "../../Components/UI/Loader";
+
 
 
 const TaskPage = () => {
@@ -25,7 +25,7 @@ const TaskPage = () => {
 
 
     if(projectTasks.length === 0){
-        return <Loader/>
+        return <div className={cl.titleInfo} >Нажмите на одну из ваших задач или создайте новую</div>
     }
     return (
         <div className={cl.taskContainer}>

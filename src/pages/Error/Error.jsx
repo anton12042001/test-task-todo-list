@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {useNavigate} from "react-router-dom";
+import cl from './Error.module.css'
 
 const Error = () => {
     const navigate = useNavigate()
@@ -16,7 +17,7 @@ const Error = () => {
         }
     },[counter])
     return (
-        <div>
+        <div className={cl.info} >
             Вы перешли на не существующую страницу
             Вы будете перенаправлены на главную страницу через {counter}
         </div>
