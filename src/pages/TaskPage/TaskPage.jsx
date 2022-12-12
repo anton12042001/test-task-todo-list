@@ -29,7 +29,7 @@ const TaskPage = () => {
     }
     return (
         <div className={cl.taskContainer}>
-            {projectTasks.taskItem.map(i => <ContentBodyTask itemTask={i} key={projectTasks.taskItem.indexOf(i)}  /> )}
+            {projectTasks.taskItem.map((i,index) => <ContentBodyTask itemTask={i} id={index} key={index}/> )}
             {(params.id) &&
                 <div className={cl.createNewTaskButton}>
                     <button onClick={() => setShowPopapCreateTask(!showPopapCreateTask)}>Создать новую задачу</button>

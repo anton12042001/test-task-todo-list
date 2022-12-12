@@ -19,6 +19,27 @@ export const setTaskFromProject = createAsyncThunk('projectTasks/setTaskFromProj
     }
 })
 
+export const deleteTaskFromProject = createAsyncThunk('projectTasks/deleteTaskFromProject',async(action,{rejectWithValue,dispatch}) => {
+    const getItem = localStorage.getItem(`${action.idProject}`)
+    if(localStorage.length !== 0 &&  getItem !== null) {
+        const item = JSON.parse(localStorage.getItem(`${action.idProject}`))
+        const taskArray = []
+        item.taskItem.map((i, index) => {
+            if (action.id !== index) {
+                taskArray.push(i)
+            }
+        })
+        const taskProject ={
+            titleTodo:JSON.parse(getItem).titleTodo,
+            taskItem:taskArray
+        }
+        localStorage.setItem(`${action.idProject}`,`${JSON.stringify(taskProject)}`)
+        dispatch(removeProjectTasks())
+        dispatch(setProjectTasks(JSON.parse(localStorage.getItem(`${action.idProject}`))))
+    }
+})
+
+
 const projectTasksSlice = createSlice({
     name:"projectTasks",
     initialState,
@@ -31,9 +52,7 @@ const projectTasksSlice = createSlice({
         }
     },
     extraReducers:(builder => {
-        // [setTaskFromProject.fulfilled]: () => console.log('fullFild'),
-        // [setTaskFromProject.pending]: () => console.log('pending'),
-        // [setTaskFromProject.rejected]: () => console.log('rejected'),
+
     })
 
 })

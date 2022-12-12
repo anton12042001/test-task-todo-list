@@ -35,9 +35,6 @@ const taskSlice = createSlice({
         }
     },
     extraReducers:(builder => {
-        // [getTask.fulfilled]: () => console.log('fullFild'),
-        // [getTask.pending]: () => console.log('pending'),
-        // [getTask.rejected]: () => console.log('rejected'),
     })
 })
 export const {setTask,removeTask} = taskSlice.actions
